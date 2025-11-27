@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Pforzheim City – Unabhängiges Stadtportal für Pforzheim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pforzheim City ist ein unabhängiges Stadtportal für Pforzheim. Nachrichten, Veranstaltungen, Unternehmen, Gastronomie und Freizeitangebote – jetzt entdecken auf pforzheim-city.de.">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph für Social Media / Sharing -->
+  <meta property="og:title" content="Pforzheim City – Stadtportal für Pforzheim">
+  <meta property="og:description" content="Lokales Stadtportal für Pforzheim mit News, Events, Unternehmen und Freizeitangeboten.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pforzheim-city.de">
+
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color-scheme: light dark;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    header {
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+      padding-bottom: 1.5rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(148, 163, 184, 0.18);
+      color: #e5e7eb;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      margin: 0 0 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #cbd5f5;
+      max-width: 34rem;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
+      gap: 2.5rem;
+    }
+
+    @media (max-width: 800px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin-top: 1.75rem;
+      margin-bottom: 0.4rem;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin-top: 1.25rem;
+      margin-bottom: 0.35rem;
+    }
+
+    p {
+      margin: 0.2rem 0 0.7rem;
+      color: #e5e7eb;
+    }
+
+    ul {
+      margin: 0.4rem 0 0.9rem 1.1rem;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 0.25rem;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight-box {
+      border-radius: 0.9rem;
+      padding: 1.25rem 1.3rem;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: radial-gradient(circle at top left, rgba(59,130,246,0.18), transparent 55%);
+      margin-top: 0.75rem;
+    }
+
+    .pill-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .pill-links a {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.82rem;
+      white-space: nowrap;
+    }
+
+    .side-card {
+      border-radius: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      padding: 1.25rem 1.4rem;
+      background: radial-gradient(circle at top right, rgba(56,189,248,0.18), transparent 55%);
+    }
+
+    .side-card h2 {
+      margin-top: 0;
+    }
+
+    .meta-list {
+      font-size: 0.9rem;
+      list-style: none;
+      margin: 0.3rem 0 0;
+      padding: 0;
+    }
+
+    .meta-list li {
+      margin-bottom: 0.2rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.78rem;
+      color: #9ca3af;
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
+      padding-top: 1rem;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.82rem;
+      background: rgba(15, 23, 42, 0.8);
+      padding: 0.15rem 0.35rem;
+      border-radius: 0.25rem;
+    }
+  </style>
+
+  <!-- Strukturierte Daten für Suchmaschinen -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Pforzheim City",
+    "url": "https://pforzheim-city.de",
+    "description": "Unabhängiges Stadtportal für Pforzheim mit lokalen Nachrichten, Veranstaltungen, Unternehmen, Gastronomie und Freizeitangeboten.",
+    "inLanguage": "de-DE"
+  }
+  </script>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="badge">Open-Source Projektseite · GitHub</div>
+      <h1>Pforzheim City – Stadtportal für Pforzheim</h1>
+      <p class="subtitle">
+        <strong>Pforzheim City</strong> ist ein unabhängiges, digitales Stadtportal für Pforzheim. 
+        Hier finden Einwohner und Besucher lokale Nachrichten, Veranstaltungen, Unternehmen, Gastronomie 
+        und viele weitere Informationen rund um die Goldstadt.
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Offizielle Webseite: Pforzheim City</h2>
+
+        <div class="highlight-box">
+          <p>
+            Die vollständigen Inhalte, Artikel und Services findest du auf der offiziellen Webseite von 
+            <strong>Pforzheim City</strong>:
+          </p>
+          <p>
+            👉 <a href="https://pforzheim-city.de" target="_blank" rel="noopener">
+              www.pforzheim-city.de – Stadtportal für Pforzheim
+            </a>
+          </p>
+          <p>
+            Das Portal bündelt lokale Informationen für Pforzheim übersichtlich an einem Ort und richtet sich 
+            sowohl an Bürgerinnen und Bürger als auch an Unternehmen und Gäste der Stadt.
+          </p>
+        </div>
+
+        <h2>Was bietet Pforzheim City?</h2>
+        <p>
+          Pforzheim City versteht sich als zentrale Anlaufstelle für digitale Informationen 
+          rund um die Stadt Pforzheim in Baden-Württemberg. Typische Inhalte sind unter anderem:
+        </p>
+        <ul>
+          <li>📰 Lokale Nachrichten & Informationen aus Pforzheim</li>
+          <li>📅 Veranstaltungen, Events & Termine in Pforzheim</li>
+          <li>🏢 Unternehmen, Dienstleister & lokale Angebote</li>
+          <li>🍽️ Gastronomie, Cafés & Restaurants in der Region</li>
+          <li>🎭 Freizeit, Kultur & Sehenswürdigkeiten in Pforzheim</li>
+          <li>ℹ️ Nützliche Stadtinfos für Besucher und Neubürger</li>
+        </ul>
+
+        <h3>Lokaler Fokus: Pforzheim im Mittelpunkt</h3>
+        <p>
+          Der Fokus von <strong>Pforzheim City</strong> liegt klar auf der Stadt Pforzheim und der 
+          umliegenden Region. Ziel ist es, lokale Inhalte sichtbar zu machen und Menschen mit passenden 
+          Informationen, Veranstaltungen und Angeboten zu verbinden.
+        </p>
+
+        <div class="pill-links">
+          <a href="https://pforzheim-city.de" target="_blank" rel="noopener">
+            Stadtportal Pforzheim besuchen
+          </a>
+          <a href="https://pforzheim-city.de" target="_blank" rel="noopener">
+            Informationen zu Pforzheim
+          </a>
+          <a href="https://pforzheim-city.de" target="_blank" rel="noopener">
+            Lokale Angebote & Services
+          </a>
+        </div>
+
+        <h2>Warum eine Projektseite auf GitHub?</h2>
+        <p>
+          Diese GitHub-Seite dient als technische und inhaltliche Begleitseite zum Stadtportal 
+          <a href="https://pforzheim-city.de" target="_blank" rel="noopener">pforzheim-city.de</a>. 
+          Sie verfolgt mehrere Ziele:
+        </p>
+        <ul>
+          <li>🔍 Transparenz über das Projekt und seine Ausrichtung</li>
+          <li>🧩 Möglichkeit, begleitende technische Ressourcen bereitzustellen</li>
+          <li>🌐 zusätzliche, vertrauenswürdige Referenz zur offiziellen Webseite</li>
+          <li>🤝 Anlaufstelle für Entwickler, Partner und interessierte Dritte</li>
+        </ul>
+
+        <h3>Geplante Erweiterungen</h3>
+        <p>
+          Mittelfristig kann dieses Repository genutzt werden, um:
+        </p>
+        <ul>
+          <li>Dokumentation zur technischen Umsetzung von Pforzheim City zu veröffentlichen</li>
+          <li>öffentliche Schnittstellen (APIs) oder Datenformate zu beschreiben</li>
+          <li>kleine Open-Source-Projekte rund um Pforzheim City bereitzustellen</li>
+        </ul>
+      </section>
+
+      <aside class="side-card">
+        <h2>Projektsteckbrief</h2>
+        <ul class="meta-list">
+          <li><strong>Projektname:</strong> Pforzheim City</li>
+          <li><strong>Typ:</strong> Digitales Stadtportal</li>
+          <li><strong>Region:</strong> Pforzheim, Baden-Württemberg, Deutschland</li>
+          <li><strong>Sprache:</strong> Deutsch</li>
+        </ul>
+
+        <h3>Direkter Link</h3>
+        <p>
+          👉 <a href="https://pforzheim-city.de" target="_blank" rel="noopener">
+            Zur offiziellen Seite von Pforzheim City
+          </a>
+        </p>
+
+        <h3>Zielgruppen</h3>
+        <ul>
+          <li>Einwohnerinnen und Einwohner von Pforzheim</li>
+          <li>Unternehmen, Dienstleister & lokale Anbieter</li>
+          <li>Touristen, Besucher & neue Bewohner</li>
+          <li>Veranstalter & Kulturakteure</li>
+        </ul>
+
+        <h3>Kontakt & Kooperation</h3>
+        <p>
+          Für Kooperationen, Partnerschaften oder technische Rückfragen 
+          nutze bitte die Kontaktdaten auf der offiziellen Webseite:
+        </p>
+        <p>
+          🔗 <a href="https://pforzheim-city.de" target="_blank" rel="noopener">
+            Kontaktmöglichkeiten auf pforzheim-city.de
+          </a>
+        </p>
+      </aside>
+    </main>
+
+    <footer>
+      <p>
+        Hinweis: Diese Seite ist eine begleitende Projektseite auf GitHub Pages und verweist auf das 
+        unabhängige Stadtportal <a href="https://pforzheim-city.de" target="_blank" rel="noopener">pforzheim-city.de</a>.
+      </p>
+      <p>
+        Technischer Hinweis: Dieses Repository kann für Dokumentation, Open-Source-Komponenten und 
+        weitere projektbezogene Informationen genutzt werden.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
